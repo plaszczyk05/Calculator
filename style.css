@@ -1,0 +1,182 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.template {
+  width: 100%;
+  max-width: 375px;
+  display: flex;
+  gap: 10px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.screen {
+  width: 100%;
+  height: 100px;
+  border-radius: 20px;
+  border: 1px solid #d2d2d2;
+  z-index: 999;
+  position: relative;
+}
+
+.block {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 999;
+}
+
+.history {
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  position: absolute;
+}
+
+.historyBackground {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.historyList {
+  width: 280px;
+  height: 200px;
+  box-shadow: 0 0 5px 1px #e0e0e0;
+  background-color: white;
+  z-index: 999;
+  border-radius: 10px;
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+.historyTxt {
+  color: #636363;
+  font-size: 18px;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.historyIcon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  height: 25px;
+  width: 25px;
+}
+
+.historyItems {
+  height: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  top: 50%;
+}
+
+.display {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 35px;
+  overflow: hidden;
+  padding: 0 10px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.buttons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+button {
+  border-radius: 90px;
+  height: 50px;
+  border: none;
+  width: 100%;
+}
+
+.b { background-color: #0b57d0; }
+.lb { background-color: #e5edff; }
+.g { background-color: #f3f5f6; }
+
+.b:active {
+  animation: bcolor 0.2s ease-in-out;
+}
+.lb:active {
+  animation: lbcolor 0.2s ease-in-out;
+}
+.g:active {
+  animation: gcolor 0.2s ease-in-out;
+}
+
+@keyframes bcolor { 
+  0% { filter: brightness(100%);
+     transform: scale(1); }
+  100% { filter: brightness(90%);
+     transform: scale(1.1); }
+}
+                    
+@keyframes lbcolor { 
+  0% { filter: brightness(100%);
+    transform: scale(1); }
+  100% { filter: brightness(90%);
+    transform: scale(1.1);}
+}
+                     
+@keyframes gcolor { 
+  0% { filter: brightness(100%);
+     transform: scale(1); }
+  100% { filter: brightness(90%);
+     transform: scale(1.1); }
+}
+
+@media (max-width: 400px) {
+  .template {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .display {
+    font-size: 25px;
+  }
+
+  .historyTxt {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="template">
+    <div class="container">
+      <div class="screen">
+        <div class="display">0</div>
+        <div class="block">
+          <div class="historyBackground">
+            <img onclick="show()" class="history" src="https://cdn-icons-png.freepik.com/256/2089/2089679.png?semt=ais_hybrid">
+            <div class="historyList">
+              <img onclick="hide()" class="historyIcon" src="https://icones.pro/wp-content/uploads/2022/03/historique-icone-de-l-historique-bleu.png">
+              <div class="historyTxt">Obliczenia i wyniki<br> pojawiają się tutaj -<br>możesz ich jeszcze<br>potrzebować</div>
+              <ul class="historyItems"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="lb">(</button>
+        <button class="lb">)</button>
+        <button class="lb">%</button>
+        <button class="lb">AC</button>
+        <button class="g">7</button>
+        <button class="g">8</button>
+        <button class="g">9</button>
+        <button class="lb">/</button>
+        <button class="g">4</button>
+        <button class="g">5</button>
+        <button class="g">6</button>
+        <button class="lb">x</button>
+        <button class="g">1</button>
+        <button class="g">2</button>
+        <button class="g">3</button>
+        <button class="lb">-</button>
+        <button class="g">0</button>
+        <button class="g">.</button>
+        <button class="b">=</button>
+        <button class="lb">+</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
